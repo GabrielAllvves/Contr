@@ -1,0 +1,49 @@
+xit<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <script src="cleave.min.js"></script> <!-- Certifique-se de incluir a biblioteca cleave.js -->
+    <title>Controle de Estoque</title>
+</head>
+<body>
+    <div class="container">
+        <div class="form-container">
+            <h2>Cadastro de Produto</h2>
+            <label for="productName">Nome do Produto:</label>
+            <input type="text" id="productName" placeholder="Nome do produto">
+            <label for="unitValue">Valor da Unidade:</label>
+            <input type="text" id="unitValue" placeholder="Valor da unidade" onfocus="initCleave()">
+            <label for="totalQuantity">Quantidade Total:</label>
+            <input type="number" id="totalQuantity" placeholder="Quantidade total">
+            <label for="brandName">Nome da Marca:</label>
+            <input type="text" id="brandName" placeholder="Nome da marca">
+            <button onclick="addProduct()">Adicionar Produto</button>
+        </div>
+        
+        <!-- Atualização -->
+        
+        <div>
+            <div class="inventory-container">
+                <h2>Estoque Atual</h2>
+                <ul id="productList"></ul>
+                <button onclick="updateProducts()">Resetar Quantidade</button>
+                
+            </div>
+        </div>
+
+        <div class="details-container">
+            <h2>Detalhes do Produto</h2>
+            <div id="productDetails"></div>
+        </div>
+
+        <div id="total-container">
+            <h2>Total</h2>
+            <p id="totalValue">R$ 0,00</p>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
+
